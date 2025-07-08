@@ -1,0 +1,39 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- x64 Release -->
+  <ItemDefinitionGroup Condition="'$(Platform)' == 'x64' and '$(Configuration)' == 'Release'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)lib\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+        boost_atomic.lib;boost_chrono.lib;boost_container.lib;boost_context.lib;boost_contract.lib;boost_coroutine.lib;boost_date_time.lib;boost_exception.lib;boost_filesystem.lib;boost_graph.lib;boost_iostreams.lib;boost_locale.lib;boost_log.lib;boost_log_setup.lib;boost_math_c99.lib;boost_math_c99f.lib;boost_math_c99l.lib;boost_math_tr1.lib;boost_math_tr1f.lib;boost_math_tr1l.lib;boost_nowide.lib;boost_prg_exec_monitor.lib;boost_program_options.lib;boost_random.lib;boost_regex.lib;boost_serialization.lib;boost_stacktrace_addr2line.lib;boost_stacktrace_basic.lib;boost_stacktrace_noop.lib;boost_system.lib;boost_thread.lib;boost_timer.lib;boost_type_erasure.lib;boost_unit_test_framework.lib;boost_wave.lib;boost_wserialization.lib;%(AdditionalDependencies)
+      </AdditionalDependencies>
+    </Link>
+
+    <PostBuildEvent>
+      xcopy /Y /D "$(MSBuildThisFileDirectory)bin\x64\Release\*.dll" "$(OutDir)"
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+
+  <!-- x64 Debug -->
+  <ItemDefinitionGroup Condition="'$(Platform)' == 'x64' and '$(Configuration)' == 'Debug'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)lib\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>
+        boost_atomic.lib;boost_chrono.lib;boost_container.lib;boost_context.lib;boost_contract.lib;boost_coroutine.lib;boost_date_time.lib;boost_exception.lib;boost_filesystem.lib;boost_graph.lib;boost_iostreams.lib;boost_locale.lib;boost_log.lib;boost_log_setup.lib;boost_math_c99.lib;boost_math_c99f.lib;boost_math_c99l.lib;boost_math_tr1.lib;boost_math_tr1f.lib;boost_math_tr1l.lib;boost_nowide.lib;boost_prg_exec_monitor.lib;boost_program_options.lib;boost_random.lib;boost_regex.lib;boost_serialization.lib;boost_stacktrace_addr2line.lib;boost_stacktrace_basic.lib;boost_stacktrace_noop.lib;boost_system.lib;boost_thread.lib;boost_timer.lib;boost_type_erasure.lib;boost_unit_test_framework.lib;boost_wave.lib;boost_wserialization.lib;%(AdditionalDependencies)
+      </AdditionalDependencies>
+    </Link>
+
+    <PostBuildEvent>
+      xcopy /Y /D "$(MSBuildThisFileDirectory)bin\x64\Debug\*.dll" "$(OutDir)"
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+
+</Project>
