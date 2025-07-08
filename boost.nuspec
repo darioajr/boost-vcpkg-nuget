@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>boost.vcpkg</id>
-    <version>1.85.0</version>
+    <version>1.86.0</version>
     <authors>Boost Community</authors>
     <owners>Dario Alves Junior</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">Apache-2.0</license>
-    <projectUrl>https://www.boost.org/</projectUrl>
+    <projectUrl>https://github.com/darioajr/boost-vcpkg-nuget</projectUrl>
     <description>Boost build from vcpkg for Windows x64 vc143 (Visual Studio 2022)</description>
     <tags>native boost vcpkg c++ lib</tags>
     <readme>README.md</readme>
